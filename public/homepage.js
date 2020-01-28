@@ -1,25 +1,22 @@
-const checkboxes = Array.from(document.querySelectorAll('.inbox input[type="checkbox"]'));
-let lastChecked;
+// const signUpName = document.getElementById("sign-up-name");
+// const signUpPassword = document.getElementById("sign-up-password");
+// const signUpBtn = document.getElementById("sign-up-btn");
+// const signInName = document.getElementById("sign-in-name");
+// const signInPassword = document.getElementById("sign-in-password");
+// const sigInBtn = document.getElementById("sign-in-btn");
 
-function handleClick(e) {
-  let inBetween = false;
-  /* see if they had the shift key down && see if they're checking (rather than unchecking) */
-  if (e.shiftKey && this.checked) {
-    checkboxes.forEach(checkbox => {
-      // console.log('this inside: ', this);
+// signUpBtn.addEventListener("click", eventHandler);
 
-      if (checkbox === this || checkbox === lastChecked) {
-        inBetween = !inBetween;
-      }
+// function eventHandler(e) {
+//   e.preventDefault();
+//   fetch("http://localhost:3000/auth/signup", {
+//     method: "POST",
+//     headers: new Headers({
+//       "Content-Type": "application/json"
+//     }),
+//     body: JSON.stringify({ signUpName.value, signUpPassword.value })
+//   }).then(res => res.json());
 
-      if (inBetween) {
-        checkbox.checked = true;
-      }
-    });
-
-    lastChecked = this;
-    // console.log('this outside: ', this);
-  }
-}
-
-checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleClick));
+//   console.log(signUpName.value);
+//   console.log(signUpPassword.value);
+// };

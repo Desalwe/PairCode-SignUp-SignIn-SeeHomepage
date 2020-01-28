@@ -4,6 +4,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const sassMiddleware = require("node-sass-middleware");
+const authRouter = require("./routes/auth");
 
 const indexRouter = require("./routes/index");
 // import other routers here like:
@@ -30,6 +31,7 @@ app.use(
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
+app.use("/auth", authRouter);
 // add more routers here:
 // app.use('/posts', postsRouter);
 
