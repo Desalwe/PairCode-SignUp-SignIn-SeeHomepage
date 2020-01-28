@@ -11,10 +11,44 @@
     <h1 class="greeting">Sign Up // Sign In</h1>
 
     <div>
-      <form action="" class="inbox">
-        <p>Enter your name</p>
-        <input class="item" type="text" />
-        <input type="submit" />
+      <form
+        action="http://localhost:3000/auth/signup"
+        method="POST"
+        class="inbox"
+        id="sign-up-form"
+      >
+        <p>Sign Up</p>
+        <input
+          class="name"
+          id="sign-up-name"
+          name="sign-up-name"
+          type="text"
+          placeholder="your name here"
+          required
+        />
+        <input
+          class="password"
+          id="sign-up-password"
+          name="sign-up-password"
+          type="password"
+          placeholder="create a password"
+          required
+        />
+        <input class="btn" id="sign-up-btn" name="sign-up-btn" type="submit" />
+      </form>
+    </div>
+    <div>
+      <form action="" class="inbox" id="sign-in-form">
+        <p>Sign In</p>
+        <input class="name" id="sign-in-name" type="text" placeholder="your name here" required />
+        <input
+          class="password"
+          id="sign-in-password"
+          type="password"
+          placeholder="enter your password"
+          required
+        />
+        <input class="btn" id="sign-in-btn" type="submit" />
       </form>
     </div>
     <!-- 
