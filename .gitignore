@@ -63,4 +63,4 @@ typings/
 
 # your secret keys
 keys.js
-secrets.js
+jwt.js
