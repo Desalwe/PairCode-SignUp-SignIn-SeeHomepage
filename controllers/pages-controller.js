@@ -1,5 +1,5 @@
 const showHomepage = (req, res, next) => {
-    res.render('index', { title: 'Wild Code School' });
-}
+  res.render("homepage.html");
+};
 
 module.exports = { showHomepage };
