@@ -15,5 +15,6 @@ connection.query(Users, err => {
     connection.end();
   } else {
     console.log("users created");
+    connection.end();
   }
 });
