@@ -15,9 +15,10 @@
         action="http://localhost:3000/auth/signup"
         method="POST"
         class="inbox"
-        id="sign-up-form-id"
+        id="sign-up-form"
       >
-        <p>Sign Up</p>
+        <label for="sign-up-name-id">Sign Up: Name</label>
+        <br />
         <input
           class="name"
           id="sign-up-name-id"
@@ -26,6 +27,9 @@
           placeholder="your name here"
           required
         />
+        <br />
+        <label for="sign-up-password-id">Password</label>
+        <br />
         <input
           class="password"
           id="sign-up-password-id"
@@ -34,12 +38,14 @@
           placeholder="create a password"
           required
         />
+        <br />
         <input class="btn" id="sign-up-btn" name="sign-up-btn" type="submit" />
       </form>
     </div>
     <div>
-      <form action="" class="inbox" id="sign-in-form">
-        <p>Sign In</p>
+      <form action="" method="GET" class="inbox" id="sign-in-form">
+        <label for="sign-in-name-id">Sign In: Name</label>
+        <br />
         <input
           class="name"
           id="sign-in-name-id"
@@ -47,6 +53,9 @@
           placeholder="your name here"
           required
         />
+        <br />
+        <label for="sign-in-password-id">Password</label>
+        <br />
         <input
           class="password"
           id="sign-in-password-id"
@@ -55,6 +64,7 @@
           placeholder="enter your password"
           required
         />
+        <br />
         <input class="btn" id="sign-in-btn" type="submit" />
       </form>
     </div>
