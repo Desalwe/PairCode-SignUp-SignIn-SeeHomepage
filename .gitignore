@@ -64,3 +64,5 @@ typings/
 # your secret keys
 keys.js
 jwt.js
+
+.DS_Store
