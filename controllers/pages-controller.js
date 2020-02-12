@@ -2,4 +2,8 @@ const showHomepage = (req, res, next) => {
   res.render("homepage.html");
 };
 
-module.exports = { showHomepage };
+const showProfile = (req, res, next) => {
+  res.render("profile.html");
+};
+
+module.exports = { showHomepage, showProfile };
