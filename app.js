@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const sassMiddleware = require("node-sass-middleware");
 const authRouter = require("./routes/auth");
+const cons = require("consolidate");
 
 const indexRouter = require("./routes/index");
 // import other routers here like:
@@ -12,14 +13,15 @@ const indexRouter = require("./routes/index");
 
 const app = express();
 
-
-
 // view engine setup
+app.engine("html", cons.swig);
 app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "html");
 
+app.use(express.static(path.join(__dirname, "/public")));
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   sassMiddleware({
@@ -29,10 +31,6 @@ app.use(
     sourceMap: true
   })
 );
-app.use(express.static(path.join(__dirname, "public")));
-
-// /nothing
-
 
 app.use("/", indexRouter);
 app.use("/auth", authRouter);

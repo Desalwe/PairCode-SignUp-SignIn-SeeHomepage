@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
   </head>
   <body>
     <h1 class="greeting">Sign Up // Sign In</h1>
@@ -42,13 +42,15 @@
         <input class="btn" id="sign-up-btn" name="sign-up-btn" type="submit" />
       </form>
     </div>
+
     <div>
-      <form action="" method="GET" class="inbox" id="sign-in-form">
+      <form action="http://localhost:3000/auth/login" method="POST" class="inbox" id="sign-in-form">
         <label for="sign-in-name-id">Sign In: Name</label>
         <br />
         <input
           class="name"
           id="sign-in-name-id"
+          name="signInNameName"
           type="text"
           placeholder="your name here"
           required
@@ -68,46 +70,5 @@
         <input class="btn" id="sign-in-btn" type="submit" />
       </form>
     </div>
-    <!-- 
-    <div class="inbox">
-      <div class="item">
-        <input type="checkbox" />
-        <p>This is an inbox layout.</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Check one item</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Hold down your Shift key</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Check a lower item</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Everything in between should also be set to checked</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Try to do it without any libraries</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Just regular JavaScript</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Good Luck!</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Don't forget to tweet your result!</p>
-      </div>
-    </div> -->
-
-    <script src="homepage.js"></script>
   </body>
 </html>
